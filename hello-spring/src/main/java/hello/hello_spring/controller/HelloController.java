@@ -20,7 +20,7 @@ public class HelloController {
         model.addAttribute("name", name); // Model model은 뷰로 데이터를 넘겨주기 위한 객체이다. 즉 html에서 ${name}으로 값 사용 가능
         return "hello-template"; //resources/templates/hello-template.html을 찾아 실행
     }
-
+//
     @GetMapping("hello-string")
     @ResponseBody //http에서 header와 body가 있는데 body에 값을 직접 넣겠다. 즉 ?name=youjin 이렇게 하면 html없이 값이 나온다.
     public String helloString(@RequestParam("name") String name){
