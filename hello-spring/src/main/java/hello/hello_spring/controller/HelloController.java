@@ -36,7 +36,7 @@ public class HelloController {
 
     }
     //1
-    static class Hello{
+    public static class Hello{
         private String name;
 
 
