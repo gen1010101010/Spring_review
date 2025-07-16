@@ -35,7 +35,7 @@ public class HelloController {
         return hello; //객체반환. 반환은 json으로 반환된다.
 
     }
-
+    //1
     static class Hello{
         private String name;
 
