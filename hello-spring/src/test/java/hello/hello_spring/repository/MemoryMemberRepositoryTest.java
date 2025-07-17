@@ -1,15 +1,24 @@
 package hello.hello_spring.repository;
 
 import hello.hello_spring.domain.Member;
+import hello.hello_spring.service.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
 
 class MemoryMemberRepositoryTest {
-    MemoryMemberRepository repository = new MemoryMemberRepository();
+    MemoryMemberRepository memberRepository;
+    MemberService memberService;
+
+    @BeforeEach
+    public void beforeEach() {
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
 
     @AfterEach
     public void afterEach(){ //test 케이스로 파일 전체 실행했을 때 오류가 발생함. 그 오류를 해결해야 함. 테스트 케이스를 실행할 때마다 클리어
