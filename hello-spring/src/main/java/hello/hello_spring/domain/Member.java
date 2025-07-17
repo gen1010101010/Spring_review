@@ -1,5 +1,6 @@
 package hello.hello_spring.domain;
 
+//여기서 Member 객체는 하나의 id, name을 갖는 묶음이다.
 public class Member {
     private long id;
     private String name;
