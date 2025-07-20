@@ -29,17 +29,14 @@ public class HelloController {
 
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello helloApi(@RequestParam("name") String name){
+    public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
         return hello; //객체반환. 반환은 json으로 반환된다.
 
     }
-    //1
     public static class Hello{
         private String name;
-
-
         public String getName(){
             return name;
         }

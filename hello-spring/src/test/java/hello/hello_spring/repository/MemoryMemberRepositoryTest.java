@@ -11,14 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 class MemoryMemberRepositoryTest {
-    MemoryMemberRepository memberRepository;
-    MemberService memberService;
+    MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    @BeforeEach
-    public void beforeEach() {
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
-    }
 
     @AfterEach
     public void afterEach(){ //test 케이스로 파일 전체 실행했을 때 오류가 발생함. 그 오류를 해결해야 함. 테스트 케이스를 실행할 때마다 클리어

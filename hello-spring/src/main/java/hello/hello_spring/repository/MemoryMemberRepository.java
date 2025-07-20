@@ -6,7 +6,7 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>(); //아이디와 해당하는 Member 객체. static이라 공유되는 것.
     private static long sequence = 0L; //ID값
 
     //하나의 데이터 묶음(id, name)인 Member를 리턴
